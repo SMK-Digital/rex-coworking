@@ -1,0 +1,105 @@
+/* Navbar geral */
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Broche', sans-serif;
+    position: relative;
+    margin-left: 25px;
+    padding: 35px 0;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    outline: none;
+    transition: 0.5s;
+}
+
+/* Navbar fixa no topo */
+.sticky-top.navbar-dark {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000000e8; /* Ajuste de cor */
+    z-index: 999;
+    box-shadow: 0 0 2px rgba(15, 146, 26, 0.7), 0 0 3px rgba(15, 146, 26, 0.7), 0 0 30px rgba(15, 146, 26, 0.7), 0 0 4px rgba(15, 146, 26, 0.7);
+}
+
+
+/* Estilo para links na navbar */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--light);
+}
+
+/* Estilo para o toggler */
+.navbar-toggler {
+    color: var(--secondary);
+    border-color: var(--light);
+    box-shadow: 0 0 1px rgba(15, 146, 26, 0.7), 0 0 3px rgba(15, 146, 26, 0.7), 0 0 10px rgba(15, 146, 26, 0.7), 0 0 4px rgba(15, 146, 26, 0.7);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--light);
+}
+
+/* Navbar para telas menores */
+@media (max-width: 991.98px) {
+    .navbar-dark {
+        background: linear-gradient(354deg, rgba(95, 96, 94, 0.856) 0%, rgba(0, 0, 0, 1) 5%, rgba(36, 35, 35, 1) 49%, rgba(0, 0, 0, 1) 85%, rgba(95, 96, 94, 0.875) 98%);
+        box-shadow: 0 0 1px rgba(15, 146, 26, 0.7), 0 0 3px rgba(15, 146, 26, 0.7), 0 0 10px rgba(15, 146, 26, 0.7), 0 0 4px rgba(15, 146, 26, 0.7);
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+
+    .navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+
+    .navbar-collapse {
+        background: linear-gradient(rgba(0, 0, 0, 0.856) 0%, rgba(36, 35, 35, 1) 49%);
+        border-radius: 5px;
+        border-bottom: 2px solid rgba(15, 146, 26, 0.788);
+        border-top: 2px solid rgba(15, 146, 26, 0.788);
+    }
+}
+
+/* Navbar para telas maiores */
+@media (min-width: 992px) {
+    .navbar-dark {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(354deg, rgba(95, 96, 94, 0.856) 0%, rgba(0, 0, 0, 1) 5%, rgba(36, 35, 35, 1) 49%, rgba(0, 0, 0, 1) 85%, rgba(95, 96, 94, 0.875) 98%);
+        box-shadow: 0 0 1px rgba(15, 146, 26, 0.7), 0 0 3px rgba(15, 146, 26, 0.7), 0 0 10px rgba(15, 146, 26, 0.7), 0 0 4px rgba(15, 146, 26, 0.7);
+    }
+
+    .navbar-dark .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -1px;
+        left: 50%;
+        background: var(--light);
+        transition: 0.5s;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+
+    .sticky-top.navbar-dark .navbar-brand h1 {
+        color: var(--secondary);
+    }
+
+    .navbar-toggler {
+        font-size: 2em;
+    }
+}
+
